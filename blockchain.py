@@ -25,11 +25,11 @@ class Block:
      
     def calculate_hash(self):
         # receive  timestamp, data and prev hash from the block as a string
-        #Hash with SHA256 encryption
+        # hash with SHA256 encryption
         return sha256((str(self.timestamp) 
                        + str(self.data) + 
                        str(self.previous_hash))
-                      #turn string variables into Unicode(encode())for hashing
+                      #turn string variables into unicode(encode())for hashing
                       #then translate unicode into a hexidecimal string (hexdigest())
                       .encode()).hexdigest()
     #get proof of contract(a random integer to prove a proof of concept)
@@ -46,7 +46,7 @@ class Blockchain:
         return Block(time.ctime(), "Genesis Block", "0")
 
     def mineBlock(self, data):
-        #get parameters for the new block and 
+        #get parameters for the new block 
         new_block = Block(time.ctime(), data, self.chain[-1].hash)  
         # mine new block to be added to the most recent block in chain
         self.chain.append(new_block)
@@ -54,7 +54,6 @@ class Blockchain:
 
     def print_blockchain(self):
         for i in range(len(self.chain)):
-            #print( "\n proof = ", self.chain[i].proof,)
             print("\n----------------------------------- Block ", i ,"-----------------------------------\n"
                   "\n timestamp = ",\
                     self.chain[i].timestamp
