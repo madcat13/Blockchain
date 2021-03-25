@@ -1,12 +1,12 @@
 #############################################################
-#This project is written in Objec-Oriented approach and
+#This project is written in Object-Oriented approach and
 #is a simple implementation of a blockchain.
 
 # The program performs following actions:
 #  -creates a block and generates hash for it
 #  -creates new block based on the hash in previous block
 #  -adds proof(prof of contract) to each block
-#  -enables user input data to be addded to blockchain
+#  -enables user input data to be added to blockchain
 #############################################################
 
 #import libraries
