@@ -5,7 +5,7 @@
 # The program performs following actions:
 #  -creates a block and generates hash for it
 #  -creates new block based on the hash in previous block
-#  -adds proof(prof of contract) to each block
+#  -adds proof(proof of contract) to each block
 #  -enables user input data to be added to blockchain
 #############################################################
 
@@ -24,7 +24,7 @@ class Block:
         self.hash = self.calculate_hash()
      
     def calculate_hash(self):
-        # receive  timestamp, data and prev hash from the block as a string
+        # receive  timestamp, data and previous hash from the block as a string
         # hash with SHA256 encryption
         return sha256((str(self.timestamp) 
                        + str(self.data) + 
